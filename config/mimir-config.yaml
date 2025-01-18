@@ -1,0 +1,22 @@
+multitenancy_enabled: false
+
+server:
+  http_listen_port: 9009
+
+distributor:
+  ring:
+    kvstore:
+      store: inmemory
+
+ingester:
+  ring:
+    replication_factor: 1
+    kvstore:
+      store: inmemory
+
+blocks_storage:
+  backend: filesystem
+  tsdb:
+    dir: /var/mimir/tsdb
+  bucket_store:
+    sync_dir: /var/mimir/tsdb-sync

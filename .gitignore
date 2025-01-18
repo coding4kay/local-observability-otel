@@ -1,0 +1,21 @@
+# Ignore Docker-related files
+docker-compose.override.yml
+docker-compose.*.yml
+.env
+
+# Ignore IntelliJ IDEA project files
+.idea/
+*.iml
+
+# Ignore build directories
+build/
+dist/
+out/
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+*.swp
+*.swo
