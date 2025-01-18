@@ -12,6 +12,14 @@ datasources:
     access: proxy
     url: http://loki:3100
     editable: true
+    jsonData:
+      derivedFields:
+        - datasourceName: Tempo
+          datasourceUid: Tempo
+          matcherRegex: "trace_id"
+          matcherType: label
+          name: traceID
+          url: $${__value.raw}
 
   - name: Mimir
     type: prometheus
